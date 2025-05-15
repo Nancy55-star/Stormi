@@ -9,9 +9,11 @@ import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import NotFound from "./Components/NotFound";
 import ContactUs from "./Components/ContactUs";
 import "bootstrap/dist/css/bootstrap.min.css";
-import FooterComponent from "./Components/Footer";
+import Footer from "./Components/Footer";
+
 import "bootstrap/dist/js/bootstrap.min.js";
-import CarouselComponent from "./Components/carousel";
+
+import AboutUs from "./Components/AboutUs";
 
 function App() {
   return (
@@ -21,7 +23,7 @@ function App() {
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
             <Link to="/home" className="navbar-brand">
-              S&M SKINCARE
+              S&M SKINCARE STUDIO
             </Link>
             <button
               className="navbar-toggler"
@@ -61,19 +63,19 @@ function App() {
                     Contact Us
                   </Link>
                 </li>
+                <li className="nav-item">
+                  <Link to="/aboutus" className="nav-link">
+                    About Us
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
         </nav>
 
-        <div className="container mt-4">
-          <h1 className="text-center">S&M</h1>
-          <CarouselComponent />
-        </div>
-
         {/* Main Header */}
         <header className="App-header">
-          <h1 className="text-center">S&M SKINCARE STUDIO</h1>
+          <h1 className="text-center ">S&M SKINCARE STUDIO</h1>
         </header>
 
         {/* Routes for page navigation */}
@@ -86,15 +88,13 @@ function App() {
           <Route path="*" element={<NotFound />} />
           <Route path="/" element={<Home />} />
           <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/aboutus" element={<AboutUs />} />
         </Routes>
       </BrowserRouter>
-
       {/* Footer Component */}
       <br />
+      <Footer />
       <br />
-      <div>
-        <FooterComponent />
-      </div>
     </div>
   );
 }

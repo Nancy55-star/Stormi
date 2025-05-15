@@ -2,27 +2,28 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; // Import slick-carousel CSS
 import "slick-carousel/slick/slick-theme.css"; // Import slick-carousel theme CSS
-
-import image from './gettyimages-640031180-612x612.jpg';
-import pic from './download.jpeg';
-import photo from'./beauty.jpeg';
-import picture from './download (3).jpeg'
+import image from "./gettyimages-640031180-612x612.jpg";
+import pic from "./download.jpeg";
+import photo from "./beauty.jpeg";
+import picture from "./download (3).jpeg";
 
 const CarouselComponent = () => {
-
-
   return (
     <div>
-    <section className="row">
+      <section className="row">
         <div className="col-md-12">
-          <div className="carousel slide" data-bs-ride="carousel" id="mycarousel">
+          <div
+            className="carousel slide"
+            data-bs-ride="carousel"
+            id="mycarousel"
+          >
             <div className="carousel-inner">
               <div className="carousel-item active">
                 <img
                   src={image}
                   alt="CHANNEL"
                   className="d-block w-100 carousel-image"
-                    style={{ height: "40vh", objectFit: "cover" }} 
+                  style={{ height: "40vh", objectFit: "cover" }}
                 />
               </div>
               <div className="carousel-item">
@@ -30,7 +31,7 @@ const CarouselComponent = () => {
                   src={photo}
                   alt=""
                   className="d-block w-100 carousel-image"
-                   style={{ height: "40vh", objectFit: "cover" }} 
+                  style={{ height: "40vh", objectFit: "cover" }}
                 />
               </div>
               <div className="carousel-item">
@@ -38,22 +39,11 @@ const CarouselComponent = () => {
                   src={pic}
                   alt=""
                   className="d-block w-100  carousel-image"
-                    style={{ height: "40vh", objectFit: "cover" }} 
+                  style={{ height: "40vh", objectFit: "cover" }}
                 />
-              </div>
-              <div>
-                <div className="carousel-item">
-                  <img
-                    src={picture}
-                    alt=""
-                    className="d-block w-100 carousel-image"
-                      style={{ height: "50vh", objectFit: "cover" }} 
-                  />
-                </div>
               </div>
             </div>
 
-     
             <a
               href="#mycarousel"
               data-bs-slide="prev"
@@ -72,7 +62,6 @@ const CarouselComponent = () => {
           </div>
         </div>
       </section>
-   
     </div>
   );
 };

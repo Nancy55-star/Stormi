@@ -1,7 +1,7 @@
 .App {
   text-align: center;
-  background-color:rgb(255, 215, 221);
-  height:fit-content;
+  background-color: rgb(255, 215, 221);
+  height: 100%;
 }
 
 .App-logo {
@@ -23,42 +23,38 @@
   align-items: center;
   justify-content: center;
   font-size: calc(5px + 2vmin);
-  font-family:fantasy;
+  font-family: fantasy;
   color: rgba(126, 18, 102, 0.74);
 }
-nav{
-  background-color:rgb(194, 210, 240);
+
+nav {
+  background-color: rgb(194, 210, 240);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: right;
   color: rgb(38, 216, 216);
-  padding:10px;
-    
+  padding: 10px;
 }
-.links{
-  margin-right:10px;
-  background-color:rgba(167, 142, 142, 0.199);
-  padding:10px;
-  border-bottom:rgb(46, 5, 5);
+
+.links {
+  margin-right: 10px;
+  background-color: rgba(167, 142, 142, 0.199);
+  padding: 10px;
+  border-bottom: rgb(46, 5, 5);
   border-top: #3a0606;
-  border-radius:5px;
-  text-decoration:none;
-  color:rgba(114, 15, 92, 0.945);
+  border-radius: 5px;
+  text-decoration: none;
+  color: rgba(114, 15, 92, 0.945);
 }
 
 .App-link {
   color: #61dafb;
 }
-.carousel{
-  image-resolution:50px ;
+
+.carousel {
+  image-resolution: 100px;
   image-rendering: inherit;
   background-color: rgb(44, 38, 30);
-  
 }
-
-
-
-
-
 
 @keyframes App-logo-spin {
   from {
@@ -66,5 +62,32 @@ nav{
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.spinner-container,
+.no-results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.no-results {
+  font-size: 1.2rem;
+  color: #b30059;
+  font-weight: bold;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

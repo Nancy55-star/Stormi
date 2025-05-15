@@ -1,0 +1,36 @@
+.password-strength-meter {
+  margin-top: 10px;
+}
+
+.password-strength-bar {
+  height: 5px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.password-strength-meter.weak .password-strength-bar {
+  background-color: red;
+}
+
+.password-strength-meter.fair .password-strength-bar {
+  background-color: orange;
+}
+
+.password-strength-meter.good .password-strength-bar {
+  background-color: yellowgreen;
+}
+
+.password-strength-meter.strong .password-strength-bar {
+  background-color: green;
+}
+
+.password-strength-meter.very-strong .password-strength-bar {
+  background-color: darkgreen;
+}
+
+.password-strength-meter span {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #777;
+}
